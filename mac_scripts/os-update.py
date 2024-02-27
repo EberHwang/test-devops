@@ -15,7 +15,7 @@ def check_for_updates():
 def install_updates():
     try:
         # Run the softwareupdate command to install updates
-        subprocess.run(['softwareupdate', '-ia'], check=True)
+        subprocess.run(['softwareupdate', '-i -a -R'], check=True)
         print("Updates installed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error installing updates: {e}")
