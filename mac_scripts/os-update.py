@@ -8,14 +8,14 @@ SECONDS_TO_DAYS = 1 / 86400
 def check_for_updates():
     try:
         # Run the softwareupdate command to check for updates
-        subprocess.run(['softwareupdate', '--list'], check=True)
+        subprocess.run(['/usr/sbin/softwareupdate', '--list'], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error checking for updates: {e}")
 
 def install_updates():
     try:
         # Run the softwareupdate command to install updates
-        subprocess.run(['softwareupdate', '-i -a -R'], check=True)
+        subprocess.run(['/usr/sbin/softwareupdate', '-i -a -R'], check=True)
         print("Updates installed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error installing updates: {e}")
