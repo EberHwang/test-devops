@@ -1,4 +1,4 @@
-xcode-select --install
+/usr/bin/xcode-select --install
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -10,6 +10,6 @@ brew install wget
 
 wget https://swcdn.apple.com/content/downloads/62/37/052-40759-A_C4UWOSGC4S/ww0ftcbuatweg276cglca3e2d7g5hpvl2u/InstallAssistant.pkg
 
-sudo softwareupdate --fetch-full-installer --full-installer-version 14.1.2
+sudo /usr/sbin/softwareupdate --fetch-full-installer --full-installer-version 14.1.2
 
 sudo /Applications/Install\ macOS\ Sonoma.app/Contents/Resources/startosinstall --agreetolicense --forcequitapps --passprompt
